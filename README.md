@@ -1,22 +1,43 @@
 # Blowpipe Calculator
 
-A RuneLite plugin that calculates Toxic blowpipe supply requirements in either direction:
+A simple RuneLite sidebar calculator for planning Toxic blowpipe supplies.
 
-- Enter a dart amount to estimate the Zulrah scales required.
-- Enter a Zulrah scale amount to estimate the darts required.
-- Select a manual ammo save rate so the calculation does not depend on equipment detection.
+## Features
 
-## Ammo save presets
+- **Darts → Scales:** enter how many darts you have and estimate how many Zulrah scales will be used while firing them.
+- **Scales → Darts:** enter a scale amount and estimate how many darts are needed to use those scales.
+- **Cape slot selector:** choose the ammo-saving effect you use.
+- **Live calculation:** results update automatically as the amount or cape-slot selection changes.
+- **Persistent selection:** your selected ammo-saving option is remembered by RuneLite.
+
+## Cape slot options
 
 - None — 0%
 - Ava's attractor — 60%
 - Ava's accumulator — 72%
-- Ava's assembler / equivalent — 80%
+- Ava's assembler — 80%
+- Dizana's quiver (upgraded) — 80%
 
-The plugin uses the Toxic blowpipe's scale consumption rate of 2 Zulrah scales per 3 attacks.
+Dizana's quiver only provides the assembler's 80% ammunition-saving effect after the assembler effect has been applied to the quiver through Ava.
+
+## Calculation
+
+The Toxic blowpipe consumes, on average, **2 Zulrah scales per 3 attacks**. Ammo-saving effects reduce the number of darts consumed, but they do not reduce the blowpipe's scale consumption per attack.
+
+Because ammunition recovery and scale consumption are probabilistic, results are **estimates based on average rates**, not guaranteed exact consumption.
 
 ## Development
 
-Open the project in IntelliJ IDEA or another Gradle-capable IDE and run the test client class.
+Run the tests:
 
-This repository is intended for RuneLite Plugin Hub submission after validation.
+```text
+./gradlew test
+```
+
+Launch the RuneLite test client:
+
+```text
+./gradlew run
+```
+
+This plugin has no third-party dependencies or network access.
