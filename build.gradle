@@ -24,3 +24,10 @@ targetCompatibility = '11'
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
+
+tasks.register('run', JavaExec) {
+    group = 'application'
+    description = 'Launch RuneLite with Blowpipe Calculator loaded'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.blowpipecalculator.BlowpipeCalculatorPluginTest'
+}
