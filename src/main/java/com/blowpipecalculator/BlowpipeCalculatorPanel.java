@@ -27,6 +27,7 @@ public class BlowpipeCalculatorPanel extends PluginPanel
     private final JSpinner amount = new JSpinner(new SpinnerNumberModel(1000, 0, Integer.MAX_VALUE, 100));
     private final JComboBox<AmmoSaveRate> ammoSaveRate = new JComboBox<>(AmmoSaveRate.values());
     private final JLabel result = new JLabel();
+    private final JLabel estimateNote = new JLabel("Based on average ammo-saving rates.");
 
     public BlowpipeCalculatorPanel(BlowpipeCalculatorConfig config, ConfigManager configManager)
     {
@@ -59,11 +60,14 @@ public class BlowpipeCalculatorPanel extends PluginPanel
         ammoSaveRate.setSelectedItem(config.ammoSaveRate());
         ammoPanel.add(ammoSaveRate, BorderLayout.CENTER);
 
-        JPanel center = new JPanel(new GridLayout(3, 1, 0, 8));
+        estimateNote.setForeground(ColorScheme.LIGHT_GRAY_COLOR);
+
+        JPanel center = new JPanel(new GridLayout(4, 1, 0, 6));
         center.setBackground(ColorScheme.DARK_GRAY_COLOR);
         center.add(inputPanel);
         center.add(ammoPanel);
         center.add(result);
+        center.add(estimateNote);
 
         dartsToScales.addActionListener(e -> updateMode());
         scalesToDarts.addActionListener(e -> updateMode());
