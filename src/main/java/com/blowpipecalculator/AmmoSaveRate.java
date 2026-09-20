@@ -5,7 +5,8 @@ public enum AmmoSaveRate
     NONE("None (0%)", 0.00),
     ATTRACTOR("Ava's attractor (60%)", 0.60),
     ACCUMULATOR("Ava's accumulator (72%)", 0.72),
-    ASSEMBLER("Assembler / equivalent (80%)", 0.80);
+    ASSEMBLER("Ava's assembler (80%)", 0.80),
+    QUIVER("Dizana's quiver (upgraded) (80%)", 0.80);
 
     private final String displayName;
     private final double saveRate;
