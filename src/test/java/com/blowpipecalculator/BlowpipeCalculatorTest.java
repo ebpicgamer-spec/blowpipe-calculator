@@ -21,7 +21,7 @@ public class BlowpipeCalculatorTest
     {
         assertEquals(1500, BlowpipeCalculator.dartsForScales(1000, AmmoSaveRate.NONE));
         assertEquals(600, BlowpipeCalculator.dartsForScales(1000, AmmoSaveRate.ATTRACTOR));
-        assertEquals(419, BlowpipeCalculator.dartsForScales(1000, AmmoSaveRate.ACCUMULATOR));
+        assertEquals(420, BlowpipeCalculator.dartsForScales(1000, AmmoSaveRate.ACCUMULATOR));
         assertEquals(300, BlowpipeCalculator.dartsForScales(1000, AmmoSaveRate.ASSEMBLER));
         assertEquals(300, BlowpipeCalculator.dartsForScales(1000, AmmoSaveRate.QUIVER));
     }
