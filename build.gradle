@@ -30,4 +30,5 @@ tasks.register('run', JavaExec) {
     description = 'Launch RuneLite with Blowpipe Calculator loaded'
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'com.blowpipecalculator.BlowpipeCalculatorPluginTest'
+    enableAssertions = true
 }
