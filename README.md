@@ -26,6 +26,10 @@ The Toxic blowpipe consumes, on average, **2 Zulrah scales per 3 attacks**. Ammo
 
 Because ammunition recovery and scale consumption are probabilistic, results are **estimates based on average rates**, not guaranteed exact consumption.
 
+## Support development
+
+Blowpipe Calculator is free and all features are available to everyone. If the plugin has helped you and you would like to support continued development, you can [buy me a coffee](https://buymeacoffee.com/ebpicgamer). Contributions are entirely optional and do not unlock additional features.
+
 ## Development
 
 Run the tests:
