@@ -53,7 +53,9 @@ public class BlowpipeCalculatorPanel extends PluginPanel
 
         JPanel ammoPanel = new JPanel(new BorderLayout(8, 0));
         ammoPanel.setBackground(ColorScheme.DARK_GRAY_COLOR);
-        ammoPanel.add(new JLabel("Ammo save:"), BorderLayout.WEST);
+        JLabel capeSlotLabel = new JLabel("Cape slot ⓘ");
+        capeSlotLabel.setToolTipText("<html>Select the ammo-saving item in your cape slot.<br>Dizana's quiver only saves ammo after being upgraded<br>with an Ava's assembler.</html>");
+        ammoPanel.add(capeSlotLabel, BorderLayout.WEST);
         ammoSaveRate.setSelectedItem(config.ammoSaveRate());
         ammoPanel.add(ammoSaveRate, BorderLayout.CENTER);
 
