@@ -1,6 +1,8 @@
 package com.blowpipecalculator;
 
 import com.google.inject.Provides;
+import java.awt.Color;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import javax.inject.Inject;
 import net.runelite.client.config.ConfigManager;
@@ -38,6 +40,14 @@ public class BlowpipeCalculatorPlugin extends Plugin
         panel = new BlowpipeCalculatorPanel(config);
 
         BufferedImage icon = ImageUtil.loadImageResource(getClass(), "/icon.png");
+        if (icon == null)
+        {
+            icon = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
+            Graphics2D graphics = icon.createGraphics();
+            graphics.setColor(new Color(0, 180, 150));
+            graphics.fillOval(2, 2, 12, 12);
+            graphics.dispose();
+        }
 
         navButton = NavigationButton.builder()
             .tooltip("Blowpipe Calculator")
@@ -52,7 +62,10 @@ public class BlowpipeCalculatorPlugin extends Plugin
     @Override
     protected void shutDown()
     {
-        clientToolbar.removeNavigation(navButton);
+        if (navButton != null)
+        {
+            clientToolbar.removeNavigation(navButton);
+        }
         navButton = null;
         panel = null;
     }
