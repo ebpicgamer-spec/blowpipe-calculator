@@ -37,6 +37,6 @@ public final class BlowpipeCalculator
         }
 
         double attacks = scales / SCALES_PER_ATTACK;
-        return (long) Math.floor(attacks * ammoSaveRate.getConsumptionRate());
+        return Math.round(attacks * ammoSaveRate.getConsumptionRate());
     }
 }
