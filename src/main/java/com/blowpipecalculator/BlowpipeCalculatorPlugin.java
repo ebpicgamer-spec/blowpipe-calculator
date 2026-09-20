@@ -25,6 +25,9 @@ public class BlowpipeCalculatorPlugin extends Plugin
     @Inject
     private BlowpipeCalculatorConfig config;
 
+    @Inject
+    private ConfigManager configManager;
+
     private NavigationButton navButton;
     private BlowpipeCalculatorPanel panel;
 
@@ -37,7 +40,7 @@ public class BlowpipeCalculatorPlugin extends Plugin
     @Override
     protected void startUp()
     {
-        panel = new BlowpipeCalculatorPanel(config);
+        panel = new BlowpipeCalculatorPanel(config, configManager);
 
         BufferedImage icon = ImageUtil.loadImageResource(getClass(), "/icon.png");
         if (icon == null)
