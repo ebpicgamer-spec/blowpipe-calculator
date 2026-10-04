@@ -29,19 +29,3 @@ Because ammunition recovery and scale consumption are probabilistic, results are
 ## Support development
 
 Blowpipe Calculator is free and all features are available to everyone. If the plugin has helped you and you would like to support continued development, you can [buy me a coffee](https://buymeacoffee.com/ebpicgamer). Contributions are entirely optional and do not unlock additional features.
-
-## Development
-
-Run the tests:
-
-```text
-./gradlew test
-```
-
-Launch the RuneLite test client:
-
-```text
-./gradlew run
-```
-
-This plugin has no third-party dependencies or network access.
