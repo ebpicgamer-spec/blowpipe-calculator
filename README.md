@@ -1,31 +1,34 @@
 # Blowpipe Calculator
 
-A simple RuneLite sidebar calculator for planning Toxic blowpipe supplies.
+A RuneLite plugin that helps estimate Toxic blowpipe dart and Zulrah scale requirements.
 
 ## Features
 
-- **Darts → Scales:** enter how many darts you have and estimate how many Zulrah scales will be used while firing them.
-- **Scales → Darts:** enter a scale amount and estimate how many darts are needed to use those scales.
-- **Cape slot selector:** choose the ammo-saving effect you use.
-- **Live calculation:** results update automatically as the amount or cape-slot selection changes.
-- **Persistent selection:** your selected ammo-saving option is remembered by RuneLite.
+- Convert darts to estimated Zulrah scales.
+- Convert Zulrah scales to estimated darts.
+- Select your cape-slot ammo-saving effect.
+- Track blowpipe attack animations and estimate attacks remaining from your starting darts and scales.
 
 ## Cape slot options
 
-- None — 0%
-- Ava's attractor — 60%
-- Ava's accumulator — 72%
-- Ava's assembler — 80%
-- Dizana's quiver (upgraded) — 80%
+- None (0%)
+- Ava's attractor (60%)
+- Ava's accumulator (72%)
+- Ava's assembler (80%)
+- Dizana's quiver (upgraded) (80%)
 
-Dizana's quiver only provides the assembler's 80% ammunition-saving effect after the assembler effect has been applied to the quiver through Ava.
+## Live attack tracker
+
+Enter your starting darts and scales in the plugin sidebar, select your cape-slot item, and press **Start tracking**. The in-game overlay counts your blowpipe attack animations and displays estimated attacks remaining, attacks recorded, and the supply that limits your estimate. You can show or hide the overlay and pause or reset tracking from the sidebar.
+
+The tracker uses average ammo-saving and scale-consumption rates. It counts blowpipe attack animations, not successful hits, and does not observe the exact random dart-saving or scale-consumption outcome of each attack.
 
 ## Calculation
 
-The Toxic blowpipe consumes, on average, **2 Zulrah scales per 3 attacks**. Ammo-saving effects reduce the number of darts consumed, but they do not reduce the blowpipe's scale consumption per attack.
-
-Because ammunition recovery and scale consumption are probabilistic, results are **estimates based on average rates**, not guaranteed exact consumption.
+The calculator uses the blowpipe's average scale consumption of 2 scales per 3 attacks and the selected cape-slot ammo-saving rate. Results are estimates, not guaranteed exact supply usage.
 
 ## Support development
 
-Blowpipe Calculator is free and all features are available to everyone. If the plugin has helped you and you would like to support continued development, you can [buy me a coffee](https://buymeacoffee.com/ebpicgamer). Contributions are entirely optional and do not unlock additional features.
+If you find this plugin useful, you can support its development:
+
+[Buy Me a Coffee](https://www.buymeacoffee.com/ebpicgamer)
