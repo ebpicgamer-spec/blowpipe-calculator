@@ -17,4 +17,15 @@ public interface BlowpipeCalculatorConfig extends Config
     {
         return AmmoSaveRate.ASSEMBLER;
     }
+
+    @ConfigItem(
+        keyName = "showTrackerOverlay",
+        name = "Show attack tracker overlay",
+        description = "Show the live blowpipe attack tracker overlay",
+        position = 1
+    )
+    default boolean showTrackerOverlay()
+    {
+        return false;
+    }
 }
