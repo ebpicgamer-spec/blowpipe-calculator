@@ -5,7 +5,6 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import javax.inject.Inject;
-import net.runelite.api.AnimationID;
 import net.runelite.api.Client;
 import net.runelite.api.events.GameTick;
 import net.runelite.client.config.ConfigManager;
@@ -24,6 +23,8 @@ import net.runelite.client.util.ImageUtil;
 )
 public class BlowpipeCalculatorPlugin extends Plugin
 {
+    // OSRS Toxic blowpipe attack animation ID.
+    private static final int BLOWPIPE_ATTACK_ANIMATION = 5061;
     private static final String CONFIG_GROUP = "blowpipecalculator";
     private static final String OVERLAY_CONFIG_KEY = "showTrackerOverlay";
 
@@ -120,7 +121,7 @@ public class BlowpipeCalculatorPlugin extends Plugin
             return;
         }
 
-        boolean blowpipeAttack = client.getLocalPlayer().getAnimation() == AnimationID.BLOWPIPE_ATTACK;
+        boolean blowpipeAttack = client.getLocalPlayer().getAnimation() == BLOWPIPE_ATTACK_ANIMATION;
 
         if (tracking && !paused && blowpipeAttack && !lastTickWasBlowpipeAttack)
         {
